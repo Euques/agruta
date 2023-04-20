@@ -181,15 +181,16 @@
 <script>
 
 var firebaseConfig = {
-apiKey: "AIzaSyCNSzDh0tC80lhoFewOCCWFgF4ec2tCqQQ",
-authDomain: "inovabarapp.firebaseapp.com",
-databaseURL: "https://inovabarapp-default-rtdb.firebaseio.com",
-projectId: "inovabarapp",
-storageBucket: "inovabarapp.appspot.com",
-messagingSenderId: "341811259005",
-appId: "1:341811259005:web:55cbc721257b0b2ff63314",
+apiKey: "AIzaSyCLEyAd_4-2n2ID0xTjwS1ouip9G9C6JDs",
+authDomain: "blacknight-600de.firebaseapp.com",
+databaseURL: "https://blacknight-600de.firebaseio.com",
+projectId: "blacknight-600de",
+storageBucket: "blacknight-600de.appspot.com",
+messagingSenderId: "588926432348",
+appId: "1:588926432348:web:47b2b4a1b421d4b2a0e299",
 
-    };
+
+};
 
     // Initialize Firebase
 
@@ -408,7 +409,7 @@ var parentURL = window != window.parent ? document.referrer : null;
 
                         firebase
                             .database()
-                            .ref('promo')
+                            .ref('agruta/promo')
                             .push(
 
                                 {
@@ -427,10 +428,10 @@ var parentURL = window != window.parent ? document.referrer : null;
 
 
                                 const base64 = avatar.src.split('base64,')[1]
-                                firebase.storage().ref(`promo${anoAtual}/${snap.key}.png`).putString(base64, 'base64', { contentType: 'image/png' }).then(snapshot => {
+                                firebase.storage().ref(`agruta/promo${anoAtual}/${snap.key}.png`).putString(base64, 'base64', { contentType: 'image/png' }).then(snapshot => {
                                     console.log('snapshot', snapshot)
 
-                                    firebase.storage().ref(`promo${anoAtual}/${snap.key}.png`).getDownloadURL().then(url => {
+                                    firebase.storage().ref(`agruta/promo${anoAtual}/${snap.key}.png`).getDownloadURL().then(url => {
                                         console.log('endereço', url)
 
 
@@ -440,7 +441,7 @@ var parentURL = window != window.parent ? document.referrer : null;
                                         var whats = document.getElementById('whats').value
 
                                         firebase.database()
-                                            .ref(`promo/${snap.key}`)
+                                            .ref(`agruta/promo/${snap.key}`)
                                             .set(
 
                                                 {
@@ -461,14 +462,14 @@ var parentURL = window != window.parent ? document.referrer : null;
                                                     sabado: true,
                                                     domingo: true,
                                                     
-                                                    regra: 'Vip até 00H com o nome nessa lista, aproveite!',
-                                                    segRegra: 'Vip até 21H com o nome nessa lista, aproveite!',
-                                                    terRegra: 'Vip até 22H com o nome nessa lista, aproveite!',
-                                                    quaRegra: 'Vip até 21H com o nome nessa lista, aproveite!',
-                                                    quiRegra: 'Vip até 21H com o nome nessa lista, aproveite!',
-                                                    sexRegra: 'Vip até 23H com o nome nessa lista, aproveite!',
-                                                    sabRegra: 'Vip até 20H com o nome nessa lista, aproveite!',
-                                                    domRegra: 'Vip até 19H com o nome nessa lista, aproveite!'
+                                                    regra: 'Com o nome na lista R$15 a noite toda, aproveite!',
+                                                    segRegra: 'Com o nome na lista R$15 a noite toda, aproveite!',
+                                                    terRegra: 'Com o nome na lista R$15 a noite toda, aproveite!',
+                                                    quaRegra: 'Com o nome na lista R$15 a noite toda, aproveite!',
+                                                    quiRegra: 'Com o nome na lista R$15 a noite toda, aproveite!',
+                                                    sexRegra: 'Com o nome na lista R$15 a noite toda, aproveite!',
+                                                    sabRegra: 'Com o nome na lista R$15 a noite toda, aproveite!',
+                                                    domRegra: 'Com o nome na lista R$15 a noite toda, aproveite!'
 
                                                 }
                                             )
